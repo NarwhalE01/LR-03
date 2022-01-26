@@ -1,21 +1,27 @@
-list1 = []
+def vvod():
+    while True:
+        n = int(input("Введите натуральное число: "))
+        if n > 0:
+            break
+        print("Неправильное число")
+    return n
 
-def collatz(x):
-    list1.append(x)
-    while x != 1:
-        if x == 1:
-            list1.append(1)
-            continue
-        elif x % 2 == 0:
-            return x2(x)
-        else:
-            return x3_1(x)
-        print (list1)
+def collatz(n):
+    list1 = [n]
+    if n == 1:
+        pass
+    elif n % 2 == 0:
+        list1.extend(x2(n))
+    else:
+        list1.extend(x3_1(n))
+    return list1
 
-def x2(x):
-    x = x / 2
-    return collatz(x)
+def x2(n):
+    return collatz(n // 2)
 
-def x3_1(x):
-    x=int(x*3+1)
-    collatz(x)
+def x3_1(n):
+    return collatz(n * 3 + 1)
+
+if __name__ == '__main__':
+    x = vvod()
+    print(collatz(x))
