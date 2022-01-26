@@ -11,11 +11,11 @@ def collatz(x):
         else:
             return x3_1(x)
         print (list1)
-
+#егор
 def x2(x):
     x = x / 2
     return collatz(x)
-    
+
 def x3_1(x):
-    x = x * 3 + 1
-    return collatz(x)
+    x=int(x*3+1)
+    collatz(x)
