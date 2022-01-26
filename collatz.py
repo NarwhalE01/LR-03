@@ -11,7 +11,7 @@ def collatz(x):
         else:
             return x3_1(x)
         print (list1)
-#егор
+
 def x2(x):
     x = x / 2
     return collatz(x)
